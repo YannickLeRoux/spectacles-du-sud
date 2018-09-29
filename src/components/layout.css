@@ -1,0 +1,22 @@
+:root {
+  --yellow: #ffc601;
+  --darkGrey: #272726;
+  --black: #06070C;
+}
+
+
+main {
+  width: 100vw;
+  background-color: #ffffff;
+  color: var(--black);
+  display: grid;
+  grid-template-columns: 3fr 12fr 5fr;
+  grid-gap: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+}
+
+.events-list {
+  display: grid;
+  grid-column: 2 / 3;
+}

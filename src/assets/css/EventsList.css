@@ -1,0 +1,49 @@
+@import './variables.css';
+
+.single-event {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 20px;
+  border-bottom: 1px solid var(--yellow);
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.single-event-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.single-event-details > * {
+  margin: 0;
+  padding: 0;
+
+}
+
+.single-event-thumbnail {
+  width: 200px;
+  height: auto;
+  align-self: center;
+  border: 2px solid var(--yellow);
+}
+
+.hr-thin {
+  color: var(--yellow);
+  height: 1px;
+
+}
+
+.hr-bold {
+  background-color: var(--yellow);
+  height: 7px;
+  border: none;
+
+}
+
+.fa, .fas, .far {
+  margin-right: 5px;
+}
