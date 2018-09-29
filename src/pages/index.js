@@ -13,12 +13,16 @@ class IndexPage extends Component {
     events: []
   }
 
+  componentWillMount() {
+    const events = this.props.data.allEvent.edges;
+    this.setState({ events });
+
+  }
   onTermChange(term) {
     this.setState({ term });
   }
 
   render() {
-    const events = this.props.data.allEvent.edges;
     return (
     <Layout>
       <SearchForm
@@ -26,7 +30,7 @@ class IndexPage extends Component {
           value={this.state.term}
         />
         <EventsList
-        events={events}
+        events={this.state.events}
          />
     </Layout>
 
