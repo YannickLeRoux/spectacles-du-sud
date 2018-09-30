@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/layout';
 import SearchForm from '../components/search_form';
 import EventsList from '../components/events_list';
@@ -19,7 +20,7 @@ class IndexPage extends Component {
 
   }
   onTermChange(term) {
-    this.setState({ term });
+    this.setState({ term })
   }
 
   render() {
