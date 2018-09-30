@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import { graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
 import SearchForm from '../components/search_form';
@@ -11,16 +11,11 @@ class IndexPage extends Component {
   state = {
     term: '',
     date: null,
-    events: []
   }
 
-  componentWillMount() {
-    const events = this.props.data.allEvent.edges;
-    this.setState({ events });
 
-  }
   onTermChange(term) {
-    this.setState({ term })
+    this.setState({ term });
   }
 
   render() {
@@ -30,33 +25,37 @@ class IndexPage extends Component {
           onTermChange={this.onTermChange.bind(this)}
           value={this.state.term}
         />
-        <EventsList
-        events={this.state.events}
+        <StaticQuery
+          query={graphql`
+          query ComingEvents {
+            allEvent(sort: {fields: [dateAndTime], order: ASC}) {
+              edges {
+                node {
+                  id
+                  name
+                  dateAndTime
+                  venue
+                  ticketsLink
+                  city
+                  thumbnail {
+                    id
+                    url
+                  }
+                }
+              }
+            }
+          }`
+          }
+          render={ data => (
+            <EventsList
+            events={data.allEvent.edges}
+             />
+          )}
          />
     </Layout>
 
     );
   }
 }
-
-export const query = graphql`
-query ComingEvents {
-  allEvent(sort: {fields: [dateAndTime], order: ASC}) {
-    edges {
-      node {
-        id
-        name
-        dateAndTime
-        venue
-        ticketsLink
-        city
-        thumbnail {
-          id
-          url
-        }
-      }
-    }
-  }
-}`;
 
 export default IndexPage;
