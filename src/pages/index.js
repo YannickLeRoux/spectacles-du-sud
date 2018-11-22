@@ -31,12 +31,13 @@ class IndexPage extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if ( this.state.term ) {
-      const events = this.props.data.allEvent.edges;
+    const events = this.props.data.allEvent.edges;
+    if ( this.state.term.length ) {
       let filterResult = events.filter( show => show.node.name.toLowerCase().includes(this.state.term.toLowerCase()));
       this.setState({ displayedEvents: filterResult });
+    } else {
+      this.setState({displayedEvents: events })
     }
-    this.setState({displayedEvents: events })
   }
 
   render() {
