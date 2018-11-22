@@ -1,12 +1,14 @@
 @import './variables.css';
 
 .single-event {
+  background-color: rgba(127, 163, 198, 0.1);
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-gap: 20px;
   border-bottom: 1px solid var(--yellow);
   margin: 10px 0;
   padding: 10px;
+  margin-bottom: 3em;
 }
 
 .single-event-details {

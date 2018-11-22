@@ -4,7 +4,6 @@ import { faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/EventsList.css';
 
 const Event = ({ id, name, thumbnail, dateAndTime, venue, ticketsLink }) => {
-  console.log(thumbnail);
 
   const formatTime = new Date(dateAndTime);
   const options = { hour:'2-digit', minute:'2-digit' };

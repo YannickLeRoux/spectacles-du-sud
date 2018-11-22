@@ -11,7 +11,6 @@ export default class EventsList extends Component {
       return _.uniqWith(list, (arrVal, othVal) => arrVal.slice(0,10) === othVal.slice(0,10));
     }, []);
 
-    console.log('dates:', dates);
     return (
       <section className="events-list">
         { dates.map( date => (

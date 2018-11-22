@@ -15,6 +15,7 @@ const StyledHeader = styled.header`
   background-size: cover;
   background-position: center;
   color: #ffffff;
+  padding: 20px;
 `;
 
 const Content = styled.div`
@@ -27,6 +28,8 @@ const Content = styled.div`
 const Title = styled.h1`
   z-index: 2;
   text-align: center;
+  font-size: 6.854em;
+  font-family: 'Gloria Hallelujah', sans-serif !important;
 
 `;
 
@@ -34,6 +37,8 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
   z-index: 2;
   text-align: center;
+  font-size: 2.618em;
+  font-family: 'Roboto', sans-serif !important;
 `;
 
 

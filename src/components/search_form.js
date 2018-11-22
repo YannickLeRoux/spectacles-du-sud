@@ -9,7 +9,9 @@ class SearchForm extends Component {
   }
   render() {
     return (
-        <form id="search-form">
+        <form id="search-form"
+          onSubmit={this.props.handleSubmit}
+        >
           <input
             onChange={this.handleChange.bind(this)}
             className="search-input"
