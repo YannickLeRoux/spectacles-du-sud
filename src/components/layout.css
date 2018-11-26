@@ -6,6 +6,7 @@
 
 
 main {
+  background-image: url(https://www.transparenttextures.com/patterns/inspiration-geometry.png);
   width: 100vw;
   background-color: #ffffff;
   color: var(--black);

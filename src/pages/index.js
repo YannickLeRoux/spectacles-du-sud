@@ -33,10 +33,17 @@ class IndexPage extends Component {
     e.preventDefault();
     const events = this.props.data.allEvent.edges;
     if ( this.state.term.length ) {
-      let filterResult = events.filter( show => show.node.name.toLowerCase().includes(this.state.term.toLowerCase()));
+      let filterResult = events.filter( show => {
+        return (
+          show.node.name.toLowerCase()
+            .includes(this.state.term.toLowerCase()) || show.node.venue.toLowerCase()
+            .includes(this.state.term.toLowerCase())
+      )
+        })
       this.setState({ displayedEvents: filterResult });
     } else {
       this.setState({displayedEvents: events })
+
     }
   }
 

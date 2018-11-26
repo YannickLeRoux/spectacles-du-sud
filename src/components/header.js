@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
   display: grid;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   height: 300px;
@@ -30,6 +31,7 @@ const Title = styled.h1`
   text-align: center;
   font-size: 6.854em;
   font-family: 'Gloria Hallelujah', sans-serif !important;
+  text-shadow: 2px 2px 3px #ffc601;
 
 `;
 
