@@ -37,8 +37,8 @@ class IndexPage extends Component {
         return (
           show.node.name.toLowerCase()
             .includes(this.state.term.toLowerCase()) || show.node.venue.toLowerCase()
-            .includes(this.state.term.toLowerCase())
-      )
+            .includes(this.state.term.toLowerCase()) || show.node.city.toLowerCase()
+            .includes(this.state.term.toLowerCase())      )
         })
       this.setState({ displayedEvents: filterResult });
     } else {
