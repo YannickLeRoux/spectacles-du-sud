@@ -16,7 +16,7 @@ class SearchForm extends Component {
             onChange={this.handleChange.bind(this)}
             className="search-input"
             type="text"
-            placeholder="Rechercher un artiste..."
+            placeholder="Recherchez un artiste, une salle de concert..."
             value ={this.props.value}
             />
 

@@ -1,7 +1,7 @@
 @import './variables.css';
 
 .single-event {
-  background-color: rgba(40, 137, 233, 0.788);
+  background-color: rgba(40, 137, 233, 0.5);
   background-image: url(https://www.transparenttextures.com/patterns/cross-scratches.png);
   display: grid;
   grid-template-columns: 1fr 6fr;
@@ -10,6 +10,7 @@
   margin: 10px 0;
   padding: 10px;
   margin-bottom: 3em;
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
 }
 
 .single-event-details {
@@ -37,6 +38,23 @@
 
 .single-event-artist {
   text-shadow: 1px 1px 2px white;
+}
+
+.single-event-tickets-button {
+  background-color: var(--yellow);
+  padding: 5px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.single-event-tickets-button:hover {
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
+}
+
+.single-event-tickets {
+  color: var(--black);
+  text-decoration: none;
 }
 
 .hr-thin {

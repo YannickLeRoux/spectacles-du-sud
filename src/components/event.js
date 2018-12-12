@@ -17,7 +17,7 @@ const Event = ({ id, name, thumbnail, dateAndTime, venue, ticketsLink }) => {
         <h3 className="single-event-artist">{name}</h3>
         <h4 className="single-event-time"><FontAwesomeIcon icon={faClock}/>  {time}</h4>
         <h4 className="single-event-venue"><FontAwesomeIcon icon={faMapMarkerAlt}/>  {venue}</h4>
-        <div><a href={ticketsLink} className="single-event-tickets">Acheter une place</a></div>
+        <button className="single-event-tickets-button"><a href={ticketsLink} className="single-event-tickets">Acheter une place</a></button>
       </div>
     </div>
   );
